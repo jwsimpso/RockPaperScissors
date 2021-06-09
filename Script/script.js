@@ -59,7 +59,7 @@ const cpuChoice = (Math.round(Math.random()*(buttonArray.length-1)));
 for (const button of buttonArray) {
     button.addEventListener('click', function() {
    if (button.id === buttonArray[cpuChoice].id){
-        playerChoiceDiv.innerHTML=("<h1 class='game-results'>You tied.</h1>")
+        playerChoiceDiv.innerHTML=(`<h1 class='game-results'>The computer chose ${buttonArray[cpuChoice].id}. You tied.</h1>`)
         ties++;
         console.log("Ties:" + ties);
         console.log("Wins:" + wins);
@@ -77,7 +77,7 @@ for (const button of buttonArray) {
     }
     
     if (button.id === "rock" && buttonArray[cpuChoice].id === "paper" || button.id ==="paper" && buttonArray[cpuChoice].id ==="scissors" || button.id ==="scissors" && buttonArray[cpuChoice].id ==="rock") {
-        playerChoiceDiv.innerHTML=("<h1 class='game-results'>You Lose.</h1>");
+        playerChoiceDiv.innerHTML=(`<h1 class='game-results'>The computer chose ${buttonArray[cpuChoice].id}. You Lose.</h1>`);
         losses++;
         console.log("Ties:" + ties);
         console.log("Wins:" + wins);
@@ -96,7 +96,7 @@ for (const button of buttonArray) {
    
     if (button.id === "rock" && buttonArray[cpuChoice].id === "scissors" || button.id === 
     "scissors" && buttonArray[cpuChoice].id === "paper" || button.id === "paper" && buttonArray[cpuChoice].id === "rock" )
-    {     playerChoiceDiv.innerHTML=("<h1 class='game-results'>You Won.</h1>"); 
+    {     playerChoiceDiv.innerHTML=(`<h1 class='game-results'>The computer chose ${buttonArray[cpuChoice].id}. You Win.</h1>`); 
         wins++;
         console.log("Ties:" + ties);
         console.log("Wins:" + wins);
